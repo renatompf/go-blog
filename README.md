@@ -1,17 +1,18 @@
 # Go-Blog
 
+## Description
 This is a CRUD Web Application made in [Golang](https://go.dev/) made to simulate a blog.
 This application used [PostgreSQL](https://www.postgresql.org/) running on [Docker](https://www.docker.com/) in order to have a database.
 
 To build this it was also used the [GIN Framework](https://gin-gonic.com/) as Web Framework and [GORM Framework](https://gorm.io) to handle the data. 
 
-# How to run it:
+## How to run it:
 
 1. You have to start the database by making `docker compose up`
 2. Then, inside of [go-blog/migrate](migrate) directory run: `go run .`. This will run the migration and create the `Post` table in the database;
 3. To finish and start the application in the main directory you make `go run .`
 
-# How to test it:
+## How to test it:
 
 ### Get All Posts:
  * GET request to `localhost:8080/posts`
