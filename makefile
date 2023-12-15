@@ -1,5 +1,5 @@
 run:
-	docker compose up;
+	doker compose build; docker compose up;
 
 stop:
 	docker compose down;

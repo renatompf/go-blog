@@ -2,15 +2,15 @@ package controllers
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/renatompf/service"
+	"github.com/renatompf/services"
 )
 
 func RegisterPostRoutes(r *gin.Engine) {
 	postGroup := r.Group("/posts")
 
-	postGroup.GET("", service.GetAllPosts)
-	postGroup.GET("/:id", service.GetPostById)
-	postGroup.POST("", service.CreateNewPost)
-	postGroup.DELETE(":id", service.DeletePostByID)
-	postGroup.PUT("/:id", service.UpdatePostById)
+	postGroup.GET("", services.GetAllPosts)
+	postGroup.GET("/:id", services.GetPostById)
+	postGroup.POST("", services.CreateNewPost)
+	postGroup.DELETE(":id", services.DeletePostByID)
+	postGroup.PUT("/:id", services.UpdatePostById)
 }
