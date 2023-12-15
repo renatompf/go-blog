@@ -8,8 +8,11 @@ To build this it was also used the [GIN Framework](https://gin-gonic.com/) as We
 
 ## How to run it:
 
-1. You have to start the database by making `docker compose up`
-2. Since the models will be automated created as tables in the database, to start the application in the main directory you make `go run .` and you can start to make requests to `localhost:8080`
+1. Since the models will be automated created as tables in the database, to start the application you can simply make the following command, and then you can start to make requests to `localhost:8080`.
+
+```shell
+make run
+```
 
 ## How to test it:
 
