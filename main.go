@@ -4,21 +4,20 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/renatompf/controllers"
 	"github.com/renatompf/initializers"
+	"github.com/renatompf/migrate"
 )
 
 func init() {
 	initializers.LoadEnvVariable()
 	initializers.ConnectToPostgres()
+	migrate.Migrate()
 }
 
 func main() {
 	r := gin.Default()
-	group := r.Group("/posts")
-	group.GET("", controllers.GetAllPosts)
-	group.GET("/:id", controllers.GetPostById)
-	group.POST("", controllers.CreateNewPost)
-	group.DELETE(":id", controllers.DeletePostByID)
-	group.PUT("/:id", controllers.UpdatePostById)
+
+	// Register Posts route
+	controllers.RegisterPostRoutes(r)
 
 	err := r.Run()
 	if err != nil {

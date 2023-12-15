@@ -9,8 +9,7 @@ To build this it was also used the [GIN Framework](https://gin-gonic.com/) as We
 ## How to run it:
 
 1. You have to start the database by making `docker compose up`
-2. Then, inside of [go-blog/migrate](migrate) directory run: `go run .`. This will run the migration and create the `Post` table in the database;
-3. To finish and start the application in the main directory you make `go run .`
+2. Since the models will be automated created as tables in the database, to start the application in the main directory you make `go run .` and you can start to make requests to `localhost:8080`
 
 ## How to test it:
 

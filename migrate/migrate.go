@@ -1,4 +1,4 @@
-package main
+package migrate
 
 import (
 	"github.com/renatompf/initializers"
@@ -6,12 +6,7 @@ import (
 	"log"
 )
 
-func init() {
-	initializers.LoadEnvVariable()
-	initializers.ConnectToPostgres()
-}
-
-func main() {
+func Migrate() {
 	err := initializers.DB.AutoMigrate(&models.Post{})
 	if err != nil {
 		log.Fatal("Something wrong when migration data to the database")
