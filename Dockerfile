@@ -8,8 +8,8 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o /renatompf
+RUN go build -o /go-blog
 
 EXPOSE 8080
 
-CMD [ "/renatompf" ]
+CMD [ "/go-blog" ]
