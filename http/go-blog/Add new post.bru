@@ -1,0 +1,18 @@
+meta {
+  name: Add new post
+  type: http
+  seq: 3
+}
+
+post {
+  url: localhost:8080/posts
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Effective Concurrency in Go",
+    "body": "Leveraging Go's concurrency primitives like goroutines and channels is key to building robust and highly performant applications. Mastering these features allows developers to create scalable and efficient software systems."
+  }
+}

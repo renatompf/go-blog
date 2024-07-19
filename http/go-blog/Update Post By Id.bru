@@ -1,0 +1,18 @@
+meta {
+  name: Update Post By Id
+  type: http
+  seq: 4
+}
+
+put {
+  url: localhost:8080/posts/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "How to Write a Web Application in Go",
+    "body": "Using Gin and GORM makes writing a web application in Go really easy, as both frameworks are incredibly helpful to the user."
+  }
+}
